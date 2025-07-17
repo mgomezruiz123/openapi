@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: MySQL Query API
+  version: 1.0.0
+paths:
+  /sql_query:
+    post:
+      summary: Ejecuta una consulta MySQL
+      operationId: sql_query
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pregunta:
+                  type: string
+      responses:
+        '200':
+          description: Resultados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  columnas:
+                    type: array
+                    items:
+                      type: string
+                  resultados:
+                    type: array
+                    items:
+                      type: array
+                      items:
+                        type: string
