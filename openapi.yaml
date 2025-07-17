@@ -3,7 +3,7 @@ info:
   title: MySQL Query API
   version: 1.0.0
 servers:
-  - url: http://localhost:8000     # <-- Reemplaza esta URL por la de tu servidor (ngrok o nube)
+  - url: https://9682df52ef41.ngrok-free.app     # <-- Reemplaza esta URL por la de tu servidor (ngrok o nube)
 paths:
   /sql_query:
     post:
